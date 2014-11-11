@@ -1,0 +1,35 @@
+Authorized by Qianqian Zhong
+
+This Documentation gives an brief introduction to those who expect to use the program for academic research and assignments of SCU COEN283.
+
+1. How to compile and execute the program?
+
+Firstly untar the folder and then use make to compile. There will be a exeutable file named P1 to appear. You can execute it like ./P1 .
+
+2. What are the inputs/outputs?
+
+According to p1 requirements from SCU COEN283, inputs/outputs can be standard inputs from keyboard and standard outputs to screen. Also you can use Unix redirection to use file as input or output.
+
+3. What are the functions of the program?
+
+According to p1 requirements from SCU COEN283, all key words have been implemented. Please look up http://www.cse.scu.edu/~mwang2 to get detailed descriptions of such key words.
+
+4. How do you organize the source files?
+
+Currently, due to the simple function requirements, there is only one cpp file. The internal function structure of main.cpp file is obvious and easily understood. Besides, there are some important comments in cpp file to those core parser functions so that you can easily figure out how I design such program.
+
+Of course, multiple file structure may be effective for readability and communication with others for future work.
+
+5. Can you briefly illustrate how you design the program?
+
+According to p1 requirements from SCU COEN283, the program reads a dat file which contains multiple file paths. Then I adopt pthread to process each command file, respectively. For each command file, the program reads each line to tell what the current command is. Then it will call corresponding function to process it until the end of the file.
+
+As for key word eval and user defined function, the processing is similar compared with other ordinary commands. The program only uses a small function to tell if a user defined function needs to be evaluted.
+
+The program contains some debug tools internally to help trace what's going on when the program is executing. Since debug for multiple thread programming is rather hard, these tools are very useful when I test the program. Currently it is not a public tool to use. You will need to add some code to use it. The name of the debug tool is PrintValues().
+
+Note: A slightly difference for key word for and key word if-else occurs because both of them are not line command. The programm has special function for both of them.
+
+6. Further contact information?
+
+My email is bradyzhong2018@gmail.com. The SCU gmail account is qzhong@scu.edu.
